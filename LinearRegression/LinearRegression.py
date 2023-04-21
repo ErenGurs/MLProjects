@@ -13,8 +13,6 @@ import matplotlib.pyplot as plt
 # Our dataset is hosted on Google Cloud. Here's how we can grab it:
 #!wget -q --show-progress "https://storage.googleapis.com/inspirit-ai-data-bucket-1/Data/AI%20Scholars/Sessions%201%20-%205/Session%202a%20-%20Linear%20Regression/car_dekho.csv"
 
-print ("Eren: ", __name__)
-
 
 def runcmd(cmd, verbose = False, *args, **kwargs):
 
