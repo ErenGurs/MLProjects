@@ -67,10 +67,11 @@ def main():
     y_pred = boundary_classifier(chosen_boundary, dataframe['radius_mean'])
     dataframe['predicted'] = y_pred
 
-    #y_true = dataframe['diagnosis']
+    y_true = dataframe['diagnosis'] # the actual diagnosis from dataframe
 
     sns.catplot(x = 'radius_mean', y = 'diagnosis_cat', hue = 'predicted', data = dataframe, order=['1 (malignant)', '0 (benign)'])
     plt.plot([chosen_boundary, chosen_boundary], [-.2, 1.2], 'g', linewidth = 2)
+    plt.title("Prediction accuracy = %f"%accuracy_score(y_true,y_pred))
 
     plt.show()
 
