@@ -93,10 +93,6 @@ def main():
     data_path  = 'car_dekho.csv'
     car_data = pd.read_csv(data_path)
 
-    # let's look at our 'dataframe'. Dataframes are just like google or excel spreadsheets. 
-    # use the 'head' method to show the first five rows of the table as well as their names. 
-    car_data.head(100) 
-
 
     # Before using seaborn, I have to install it. Then I realized I was by default using conda' base environemnet in zsh.
     # And I was installing it under conda's "base" environment (see conda env list). But VS Code was not using that environemnt.
@@ -105,8 +101,6 @@ def main():
     #       $ usr/local/bin/python3 -m pip install --upgrade pip
     #   2. Install seaborn:
     #       $ pip install seaborn
-
-
 
     LinearRegressionModel2D(car_data)
 
