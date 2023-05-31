@@ -8,7 +8,7 @@ $ python PneumoniaDetection.py
 ```
 
 ## Results:
-Illustration of Normal vs. Pneumonia X-rays. Untrained eye can not distinguish pneumonia from images. Sample dataset is formed of 1400 normal + 1400 pneumonia images .
+Illustration of Normal vs. Pneumonia X-rays. Untrained eye can not distinguish pneumonia from images. Training & testing dataset is composed of 1200 normal + 1200 pneumonia images .
 
 Sample X-rays              |  Train & Test Dataset
 :-------------------------:|:-------------------------:
