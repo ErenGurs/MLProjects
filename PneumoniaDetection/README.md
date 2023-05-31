@@ -2,19 +2,19 @@
 
 ![](https://storage.googleapis.com/kaggle-competitions/kaggle/10338/logos/header.png)
 
-Detects pneumonia from X-ray images
+Detects pneumonia from X-ray images. Use the following commandline to run:
 ```
 $ python PneumoniaDetection.py
 ```
 
 ## Results:
-Sample Normal vs. Pneumonia X-rays. Untrained eye can not distinguish from images. Sammple dataset is formed 1400 normal + 1400 pneumonia images .
+Illustration of Normal vs. Pneumonia X-rays. Untrained eye can not distinguish pneumonia from images. Sample dataset is formed of 1400 normal + 1400 pneumonia images .
 
 Sample X-rays              |  Train & Test Dataset
 :-------------------------:|:-------------------------:
 <img src="results/Pneumonia.png" width="800">   |  <img src="results/Dataset.png" width="300">
 
-Tested four classification algortihms as Baseline with accuracies as listed below:
+Tested four classification algortihms as Baseline with accuracies as listed below. MLP has the highest accuracy of ~75%:
 ```
 Running KNeighbors ...
 Running LogisticRegression ...
