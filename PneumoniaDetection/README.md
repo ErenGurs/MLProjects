@@ -4,8 +4,11 @@
 
 Detects pneumonia from X-ray images. Use the following commandline to run:
 ```
-$ python PneumoniaDetection.py --training    // for training
-$ python PneumoniaDetection.py               // for inference
+Pneumonia detection from X-ray images.
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --training  sum the integers (default: find the max)
 ```
 
 ## Results:
