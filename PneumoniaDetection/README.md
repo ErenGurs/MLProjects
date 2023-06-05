@@ -18,7 +18,7 @@ Sample X-rays              |  Train & Test Dataset
 :-------------------------:|:-------------------------:
 <img src="results/Pneumonia.png" width="800">   |  <img src="results/Dataset.png" width="300">
 
-Tested four classification algortihms as Baseline with accuracies as listed below. MLP has the highest accuracy of ~75%:
+Tested four classification algortihms as Baseline with accuracies as listed below. Compared to the baseline algorihms 3-layer CNN (layer: Conv2d+ReLU+MaxPool) performed significantly better (88%). 
 ```
 Running KNeighbors ...
 Running LogisticRegression ...
@@ -28,7 +28,7 @@ Running MLP ...
       0.88750             0.7025              0.6775              0.6575              0.7575      
 ```
 
-Diagram for one hdden layer CNN with two fully connected layers is shown below
+Diagram for one hidden layer CNN with two fully connected layers is shown below
 <img src="results/nn-3.svg" width="1200">
 
 The total model parameters are:
