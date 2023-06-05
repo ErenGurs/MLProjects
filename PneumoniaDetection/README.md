@@ -4,7 +4,8 @@
 
 Detects pneumonia from X-ray images. Use the following commandline to run:
 ```
-$ python PneumoniaDetection.py
+$ python PneumoniaDetection.py --training    // for training
+$ python PneumoniaDetection.py               // for inference
 ```
 
 ## Results:
@@ -20,8 +21,37 @@ Running KNeighbors ...
 Running LogisticRegression ...
 Running DecisionTree ...
 Running MLP ...
-     KNeighbors      LogisticRegression     DecisionTree      MLP (Perceptron)  
-       0.7025              0.6775              0.6575              0.7575      
+   CNN (3-layer)      KNeighbors      LogisticRegression     DecisionTree      MLP (Perceptron)  
+      0.88750             0.7025              0.6775              0.6575              0.7575      
+```
+
+Diagram for one hdden layer CNN with two fully connected layers is shown below
+<img src="results/nn-3.svg" width="1200">
+
+The total model parameters are:
+```
+_________________________________________________________________
+ Layer (type)                   Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)                (None, 64, 64, 32)        896              
+ activation (Activation)        (None, 64, 64, 32)        0              
+ max_pooling2d (MaxPooling2D)   (None, 32, 32, 32)        0           
+ conv2d_1 (Conv2D)              (None, 32, 32, 64)        18496        
+ activation_1 (Activation)      (None, 32, 32, 64)        0           
+ max_pooling2d_1 (MaxPooling2D  (None, 16, 16, 64)        0         
+ conv2d_2 (Conv2D)              (None, 16, 16, 64)        36928     
+ activation_2 (Activation)      (None, 16, 16, 64)        0         
+ max_pooling2d_2 (MaxPooling2D) (None, 8, 8, 64)          0         
+ flatten (Flatten)              (None, 4096)              0         
+ dense_4 (Dense)                (None, 128)               524416    
+ dropout (Dropout)              (None, 128)               0         
+ dense_5 (Dense)                (None, 64)                8256      
+ dropout_1 (Dropout)            (None, 64)                0
+ dense_6 (Dense)                (None, 1)                65                                                                
+=================================================================
+Total params: 589057 (2.25 MB)
+Trainable params: 589057 (2.25 MB)
+Non-trainable params: 0 (0.00 Byte)
 ```
 
 ## Related Work:
